@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>変数のテスト</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%">
+			<script >
+				var month;
+				month = prompt("月を入力して下さい" , 1);
+				month = Number(month);
+
+				switch(month) {
+					case 12:
+					case 1:
+					case 2:
+						document.write("<h1>冬</h1>");
+						break;
+					case 3:
+					case 4:
+					case 5:
+						document.write("<h1>春</h1>");
+						break;
+					case 6:
+					case 7:
+					case 8:
+						document.write("<h1>夏</h1>");
+						break;
+					case 9:
+					case 10:
+					case 11:
+						document.write("<h1>秋</h1>");
+						break;
+					default:
+						document.write("<h1>1から12の値を入力してください</h1>");
+					}
+			</script>
+		</p>
+	</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>変数のテスト</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%">
+			<script >
+			/*
+				var month;
+				month = prompt("月を入力してください" , 1);
+
+				if ((month == 12) || (month == 1) || (month == 2)) {
+					document.write("<h1>冬</h1>");
+				} else if ((month >= 3) && (month <= 5)) {
+					document.write("<h1>春</h1>");
+				} else if ((month >= 6) && (month <= 8)) {
+					document.write("<h1>夏</h1>");
+				} else if ((month >= 9) && (month <= 11)) {
+					document.write("<h1>秋</h1>");
+				} else {
+					document.write("<h1>1から12の値を入力してください</h1>");
+				}
+			*/
+
+				var num;
+				num = prompt("数字を入力してください" , 1);
+				num_amari = num % 2;
+				document.write("<h1>入力された値：　" , num , "</h1>");
+				document.write("<h1>入力された値を２で割ったあまり：　" , num_amari , "</h1>");
+/*
+				if (num_amari == 1) {
+					document.write("<h1>奇数です</h1>");
+				} else if (num_amari == 0) {
+					document.write("<h1>偶数です</h1>");
+				} else {
+					document.write("<h1>数字以外の文字が入力されました</h1>")
+				}
+*/
+
+				if ((num % 2) == (1) || (num % 2) == (-1)) {
+					document.write("<h1>入力された値は奇数です</h1>");
+				} else if ((num % 2) == (0)) {
+					document.write("<h1>入力された値は偶数です</h1>");
+				} else {
+					document.write("<h1>数字を入力して下さい</h1>");
+				}
+			</script>
+		</p>
+	</body>
+
+</html>

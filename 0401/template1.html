@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>変数のテスト</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%">
+			<script >
+			var refvalue = 80;
+			var score;
+			score = prompt("点数を入力してください" , 80);
+
+			if (score == 100){
+				document.write("<h1>百点満点!</h1>");
+			}
+			if (score >= refvalue) {
+				document.write("<h1>合格です</h1>");
+				document.write("<p>よく頑張りました</p>");
+			} else{
+				document.write("<h1>不合格です</h1>");
+				document.write("<p>もう少し頑張りましょう</p>");
+			}
+			</script>
+		</p>
+	</body>
+
+</html>

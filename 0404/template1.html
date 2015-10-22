@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>変数のテスト</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<table>
+			<tr>
+				<th>平成</th><th>西暦</th>
+			</tr>
+		<p style="font-size:200%">
+			<script >
+			/*
+			var i;
+			for (i = 1; i <= 10; i = i+1) {
+				if (i == 1){
+					document.write("<tr><td>" , "元年" , "</td>");
+					document.write("<td>" , i + 1988 , "</td>");
+					document.write("<td>" , 2015 - (i + 1988) , "</td></tr>");
+				} else{
+					document.write("<tr><td>" , i , "</td>");
+					document.write("<td>" , seireki = i + 1988 , "</td>");
+					document.write("<td>" , 2015 - (i + 1988) , "</td></tr>");
+				}
+
+			}
+			*/
+/*
+			var i , j;
+			for (i = 1; i <= 5; i++){ //1のループ（外側）
+				document.write("<h1>外側" , i , "回目のループ</h1>");
+				for (j = 1; j <= 3; j++){ //2のループ（内側）
+					document.write("<h2>内側" , j , "回目のループ</h2>");
+				} //2のループ（内側）
+			} //1のループ（外側）
+*/
+			</script>
+		</table>
+
+		<table border="1" cellspacing="0" cellpadding="20">
+<!--
+			<tr>
+				<th></th>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+				<th>6</th>
+				<th>7</th>
+				<th>8</th>
+				<th>9</th>
+			</tr>
+-->
+			<script>
+/*
+				var i , j;
+				for (i = 1; i <= 5 ; i++) {
+					document.write("<tr>");
+					for (j = 1; j <= 3 ; j++) {
+						document.write("<td style="padding: 10px 0;">" , j , "</td>");
+					}
+					document.write("</tr>")
+				}
+*/
+
+/*
+				var i , j;
+				for (i = 1; i <= 9; i++) {
+					document.write("<tr>" , i );
+					for (j = 1; j <= 9; j++){
+						document.write("</td>" , j , "</td>");
+					}
+					document.write("</tr>");
+				}
+*/
+
+/*
+				var i , j;
+				for (i = 1; i <= 9 ; i++) {
+					document.write("<tr>");
+					for (j = 1; j <= 10 ; j++) {
+						if (j == 1) {
+							document.write("<th>" , i , "</th>");
+						} else {
+							document.write("<td>" , i * (j - 1) , "</td>");
+						}
+					}
+					document.write("</tr>")
+				}
+*/
+
+
+
+
+				var i , j;
+				for (i = 1; i <= 10 ; i++) {
+					document.write("<tr>");
+					for (j = 1; j <= 10 ; j++) {
+						if (i == 1) {
+							if (j == 1){
+								document.write("<th>" , "" , "</th>");
+							} else{
+								document.write("<th>" , j - 1 , "</th>");
+							}
+						} else if(j == 1){
+							document.write("<th>" , i - 1 , "</th>");
+						} else {
+							document.write("<td>" , (i - 1) * (j - 1) , "</td>");
+						}
+					}
+					document.write("</tr>")
+				}
+
+
+
+			</script>
+		</table>
+		</p>
+	</body>
+
+</html>

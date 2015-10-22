@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>変数のテスト</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%">
+			<script >
+				var height;  //身長（ｃｍ）
+				var stdweight;  //標準体重（ｋｇ）;
+				var height_jijyo
+//				height_jijyo = height^2
+//				height = prompt("身長を入力してください" , 150);
+//				stdweight = (height - 100) * 0.9;
+				document.write("身長：" , height , "cm" , "<br>");
+				document.write("標準体重：" , stdweight , "kg" , "<br>");
+				document.write("身長の二乗：" , height_jijyo , "cm" , "<br>");
+
+				var bmiheight;
+				var bmiweight;
+
+				//bmiheight = prompt("身長を入力いてください（ｃｍ）" , 150);
+				//bmiweight = prompt("体重を入力してください（ｋｇ）" , 45);
+
+				document.write("身長 ：" , bmiheight , "(cm)" , "<br>");
+				document.write("体重 ：" , bmiweight , "(kg)" , "<br>");
+
+				var bmiresult;
+				//document.write("BMI :" , bmiresult = bmiweight;
+				document.write("BMI :" , bmiresult = bmiweight / ((bmiheight / 100)*(bmiheight / 100)) , "<br>");
+
+				bmiresult = prompt("bmi条件テスト用")
+				document.write("BMテスト用 :" , bmiresult , "<br>")
+
+				if ( bmiresult < 18.5) {
+					document.write("<h1>痩せすぎです</h1>");
+				} else if ((bmiresult >= 18.5) && (bmiresult < 25)) {
+					document.write("<h1>適正です</h1>");
+				} else if (bmiresult >= 25) {
+					document.write("<h1>痩せましょう</h1>");
+				} else{
+					document.write("<h1>数字を入れてください</h1>")
+				}
+			</script>
+		</p>
+	</body>
+
+</html>

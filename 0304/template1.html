@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>変数のテスト</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%">
+			<script >
+				var result;
+				result = (3 + 4) * 5;
+				document.write(result);
+/*****追記*****/
+				var num3;
+				num3 = 20;
+				document.write("<p>私の年齢は" + (num3 + 1) + "才です。</p>");
+				document.write("<p>私の年齢は"  , num3 + 1 , "才です。</p>");
+//				alert("私の年齢は" + (num3 + 1) + "才です。");
+/*****追記２*****/
+				var num4 = 10;
+				document.write("1⃣" , num4 , "<br>");
+				num4 = num4 + 1;
+				document.write("2⃣" , num4 , "<br>");
+				document.write("3⃣" , num4 = num4 + 1 , "<br>");
+				document.write("4⃣" , num4 , "<br>");
+			</script>
+		</p>
+	</body>
+
+</html>
