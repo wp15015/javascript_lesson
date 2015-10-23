@@ -9,7 +9,7 @@
 			<tr>
 				<th>平成</th><th>西暦</th>
 			</tr>
-		<p style="font-size:200%">
+		<p style="font-size:200%;">
 			<script >
 			/*
 			var i;
@@ -116,6 +116,120 @@
 
 
 			</script>
+
+<!--三角形-->
+
+			<div style="color:#00ff00;line-height:10px;">
+				<script>
+					var i , j;
+					for (i = 1; i <= 50; i++) {
+						for (j = 1; j <= i; j++) {
+							document.write("*");
+						}
+						document.write("<br>");
+					}
+				</script>
+			</div>
+
+
+
+<!--特殊な三角形-->
+			<style>
+				#asuta1{
+					color: #00ff00;
+					display: inline;
+				}
+				#asuta2{
+					color: #0000ff;
+					display: inline;
+				}
+			</style>
+			<div style="color:#ffff00;line-height:10px;">
+				<script>
+					var i , j;
+					for (i = 1; i <= 50; i++) {
+						for (j = 1; j <= 50; j++) {
+							if (j <= i){
+								document.write('<div id="asuta1">*</div>');
+							} else {
+							document.write('<div id="asuta2">*</div>');
+							}
+						}
+						document.write("<br>");
+					}
+				</script>
+			</div>
+<!--ここまで特殊な三角形-->
+
+<!--逆三角形-->
+
+			<div style="color:#ff0000; line-height:10px;">
+				<script>
+					var x = 50;
+					for (i = 1; i <= x; i++){
+						for (j = 0; j <= (x - i); j++){
+							document.write("*");
+						}
+						document.write("<br>");
+					}
+				</script>
+			</div>
+
+<!--特殊な逆三角形-->
+			<style>
+				#asuta3{
+					color: #ff0000;
+					display: inline;
+				}
+				#asuta4{
+					color: #00f000;
+					display: inline;
+				}
+				#asuta5{
+					color: #c71585;
+					display: inline;
+				}
+				#asuta6{
+					color: #ff7f50;
+					display: inline;
+				}
+			</style>
+			<div style="color:#ffff00;line-height:10px;">
+				<script>
+					var i , j;
+					for (i = 100; i >= 1; i--) {
+						document.write("<br>");
+						for (j = 1; j <= 100; j++) {
+							if (j <= i) {
+								if (j <= (i / 2)) {
+									document.write('<div id="asuta3">*</div>');
+								} else{
+								document.write('<div id="asuta4">*</div>');
+								}
+							} else
+								if (j <= (i/2)*4){
+									document.write('<div id="asuta5">*</div>');
+								} else{
+									document.write('<div id="asuta6">*</div>');
+							}
+						}
+					}
+				</script>
+			</div>
+<!--ここまで特殊な逆三角形-->
+
+			<div style="color:#0000ff; line-height:10px;">
+				<script>
+					for (i = 50; i >= 1; i--){
+						for (j = 1; j <= i; j++){
+							document.write("*");
+						}
+						document.write("<br>");
+					}
+				</script>
+			</div>
+
+
 		</table>
 		</p>
 	</body>
