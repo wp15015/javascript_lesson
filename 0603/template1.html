@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>ユーザー定義の作成</title>
+		<script>
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%;">
+			<script >
+				var num1 = 10;
+				var num2 = 15;
+				var num3 = 16;
+//				document.write("<h1>" , Math.max(num1 , num2 , num3) , "</h1>");
+//				document.write("<h1>" , Math.min(num1 , num2 , num3) , "</h1>");
+
+				var random = Math.random();
+				document.write(random);
+				if (random < 0.1){
+					document.write("<h1>" , "<大吉>" , "</h1>");
+				} else if (random < 0.9) {
+					document.write("<h1>" , "<吉>" , "</h1>");
+				}else {
+					document.write("<h1>" , "<凶>" , "</h1>");
+				}
+
+			</script>
+		</p>
+	</body>
+
+</html>
