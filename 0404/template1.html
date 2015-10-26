@@ -194,15 +194,23 @@
 					display: inline;
 				}
 				#asuta7{
-					color: #800000;
+					color: #daa520;
 					display: inline;
 				}
 				#asuta8{
 					color: #6a5acd;
 					display: inline;
 				}
+				#asuta9{
+					color: #66cdaa;
+					display: inline;
+				}
+				#asuta10{
+					color: #6a5acd;
+					display: inline;
+				}
 			</style>
-			<div style="color:#ffff00;line-height:10px;">
+			<div style="line-height:7px;letter-spacing:0px;">
 				<script>
 					var i , j;
 					for (i = 100; i >= 1; i--) {
@@ -210,15 +218,31 @@
 						for (j = 1; j <= 100; j++) {
 							if (j <= i) {
 								if (j <= (i / 2)) {
-									document.write('<div id="asuta3">*</div>');
+									if (j <= 100 - i) {
+										document.write('<div id="asuta3">*</div>');
+									} else {
+										document.write('<div id="asuta9">*</div>');
+									}
 								} else{
-									document.write('<div id="asuta4">*</div>');
+									if (j <= 100 - i) {
+										document.write('<div id="asuta4">*</div>');
+									} else {
+										document.write('<div id="asuta10">*</div>');
+									}
 								}
 							} else
 								if (j <= (i/2)*4){
-									document.write('<div id="asuta5">*</div>');
-								} else {
+									if (j <= 100 - i) {
+										document.write('<div id="asuta5">*</div>');
+									} else {
+										document.write('<div id="asuta7">*</div>');
+									}
+								} else{
+									if ( j <= 100 - i) {
 										document.write('<div id="asuta6">*</div>');
+									} else {
+										document.write('<div id="asuta8">*</div>');
+									}
 							}
 						}
 					}

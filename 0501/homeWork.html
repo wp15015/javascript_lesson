@@ -4,23 +4,19 @@
 		<meta charset="utf-8">
 		<title>ユーザー定義の作成</title>
 		<script>
-			function dollToYen(doll,rate){
+			function dollToYen(doll , rate){
 				var yen;
 				yen = doll * rate;
 				return yen;
 			}
+
 		</script>
 	</head>
 	<body bgcolor="#ffffff">
 		<p style="font-size:200%;">
 			<script >
 				var yen1 = dollToYen(100 , 90);
-				document.write(yen1 , "円<br>");
-
-				var doll2 = 50;
-				var rate2 = 88;
-				var yen2 = dollToYen(doll2 , rate2);
-				document.write(yen2,"円<br>");
+				document.write(yen1,"円<br>");
 			</script>
 		</p>
 	</body>
