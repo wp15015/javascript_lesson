@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>配列の基礎</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%;">
+			<script >
+				var names = new Array(4);
+				names[0] = "山田太郎";
+				names[1] = "中山一郎";
+				names[2] = "井上花子";
+				names[3] = "江藤桜";
+
+				document.write("<h2>こんにちは" , names[0] , "さん</h2>");
+				document.write("<h2>こんにちは" , names[1] , "さん</h2>");
+				document.write("<h2>こんにちは" , names[2] , "さん</h2>");
+				document.write("<h2>こんにちは" , names[3] , "さん</h2>");
+
+				for (var i = 0; i <= (names.length - 1); i++) {
+					document.write("<h2 style='color:red;'>こんにちは" , names[i] , "さん</h2>");
+				}
+			</script>
+		</p>
+	</body>
+
+</html>

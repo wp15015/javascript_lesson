@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>オブジェクトのメソッド</title>
+		<script>
+			function compare(a , b) {
+				return a - b;
+			}
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%;">
+			<script >
+				var ages = new Array(4,6,10,24,1,11,40);
+				ages = ages.sort(compare);
+				document.write(ages.join(" > "));
+			</script>
+		</p>
+	</body>
+
+</html>

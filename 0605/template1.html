@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>リンクや文字を設定する</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%;">
+			<script >
+				var url = "http://google.co.jp";
+				var text = "Google".link(url) + "で検索";
+				document.write("<h1>" , text , "</h1>");
+
+				var str1 = "Stringオブジェクトのメソッド";
+				for (var i = 1; i <= 7; i++) {
+					document.write("<p>" , str1.fontsize(i) , "</p>");
+				}
+
+				var str2 = str1.fontsize(5).fontcolor("blue");
+				document.write(str2);
+			</script>
+		</p>
+	</body>
+
+</html>
