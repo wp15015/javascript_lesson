@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja"> 
+	<head>
+		<meta charset="utf-8">
+		<title>2次元配列</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<script>
+/*
+		var members = new Array();
+		members[0] = new Array();
+		members[1] = new Array();
+		members[2] = new Array();
+	
+		members[0][0] = "a";
+		members[0][1] = "b";
+		members[0][2] = "c";
+		members[0][3] = "g";
+		members[1][0] = "d";
+		members[1][1] = "e";
+		members[1][2] = "f";
+		members[2][0] = "h";
+		members[2][1] = "i";
+		members[2][2] = "j";
+		document.write("<h1>" , members[0][0] , "</h1>");
+		document.write("<h1>" , members[0][1] , "</h1>");
+		document.write("<h1>" , members[0][2] , "</h1>");
+		document.write("<h1>" , members[0][3] , "</h1>");
+		for (var num in members){
+			for (var num2 in members[num]) {
+				document.write("<h1>members[" , num , "][" , num2 , "]の値は、" , members[num][num2] , "</h1>");
+				/*
+				for ( var num3 in members[num][num2]){
+					document.write("<h1>" , members[num][num2][num3] , "</h1>");
+				}
+				
+			}
+			document.write("---members[", num , "]のループおわり---");
+		}
+*/
+		var tshirts = new Object();
+		tshirts["small"] = new Object();
+		tshirts["middle"] = new Object();
+		tshirts["large"] = new Object();
+		tshirts["small"] = {price : 2800 , stock : 10 /*, color : "red"*/};
+		tshirts["middle"] = {price : 2900 , stock : 20 /*, color : "blue"*/};
+		tshirts["large"] = {price : 3000 , stock : 11 /*, color : "yellow"*/};
+		tshirts["xlarge"] = {price : 3100 , stock : 23 /*, color : "black"*/};
+document.write("<table border='1'>");
+		document.write(
+					"<tr>" , 
+						"<th>サイズ</th>" , 
+						"<th>値段</th>" , 
+						"<th>カラー</th>" , 
+						"<th>在庫数</th>" , 
+					"</tr>"
+					);
+		for (var size in tshirts){
+			tshirts[size]["color"] = new Object; //サイズごとに配列を定義する
+			tshirts[size]["color"] = {red : "赤色" , blue : "青色" , yellow : "黄色" , pink : "桃色" , green : "緑色"}; //色ごとにキーと値を定義する
+		document.write(
+			"<tr>" , //列開始
+				"<td>" , size , "</td>" , //キーの文字列を出力
+				"<td>" , tshirts[size]["price"] , "円</td>" //価格を出力	
+			);
+		document.write("<td>"); //色を出力
+		for (var selectColor in tshirts[size]["color"]){ //３次元目をループ
+			document.write("<span style='color:", selectColor , ";'>" , tshirts[size]["color"][selectColor] , "</span><br>"); //span style=color:で色指定(cssです)、<br>で改行
+		}
+		document.write("</td>"); //色のセル閉じ
+		document.write("<td>" , tshirts[size]["stock"] , "枚</td>" , //在庫数を出力
+			"</tr>" // 列閉じ
+			);
+		}
+	document.write("</table>");
+		</script>
+	</body>
+
+</html>

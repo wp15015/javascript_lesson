@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>オブジェクトのメソッド</title>
+		<script>
+//			var colors = new Object();
+			var colors = {white:"白" , red:"赤" , green:"緑" , yellow:"黄"}
+			//colors.yellow = "黄色"; //キーをプロパティとして使用した場合
+			/*
+			colors["white"] = "白色";
+			colors["red"] = "赤色";
+			colors["green"] = "緑色";
+			colors["yellow"] = "黄色";
+			colors["pink"] = "桃色";
+			colors["black"] = "黒";
+			document.write("<h2>" , colors["red"] , "</h2>");
+			*/
+
+			for (var eigo in colors) {
+				document.write("<h2>" , eigo + " " + colors[eigo] , "</h2>");
+			}
+		</script>
+		</p>
+	</body>
+
+</html>

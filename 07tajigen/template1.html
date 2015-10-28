@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>オブジェクトのメソッド</title>
+		<script>
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%;">
+			<script >
+				var members = new Array();
+
+				members[0] = Array();
+				members[1] = Array();
+				members[2] = Array();
+
+				members[0][0] = "a";
+				members[0][1] = "b";
+				members[0][2] = "c";
+				members[0][3] = "g";
+
+				members[1][0] = "d";
+				members[1][1] = "e";
+				members[1][2] = "f";
+
+				members[2][0] = "h";
+				members[2][1] = "i";
+				members[2][2] = "j";
+
+				document.write("<h2>members[0][0]は" , members[0][0] , "です</h2>");
+				document.write("<h2>members[0][1]は" , members[0][1] , "です</h2>");
+				document.write("<h2>members[0][2]は" , members[0][2] , "です</h2>");
+				document.write("<h2>members[1][0]は" , members[1][0] , "です</h2>");
+				document.write("<h2>members[1][1]は" , members[1][1] , "です</h2>");
+				document.write("<h2>members[1][2]は" , members[1][2] , "です</h2>");
+
+				for (var i = 0; i <= (members.length - 1); i++) {
+					for (var j = 0; j <= 2; j++) {
+						document.write("<h2 style='color:#ff0000'>members[][]は" , members[i][j] , "です</h2>");
+					}
+				}
+
+				for (var soeji in members) {
+					document.write("<h2 style='color:#00ff00'>members[",soeji,"][0]は", members[soeji][0] ,"</h2>");
+					document.write("<h2 style='color:#00ff00'>members[",soeji,"][1]は", members[soeji][1] ,"</h2>");
+					document.write("<h2 style='color:#00ff00'>members[",soeji,"][2]は", members[soeji][2] ,"</h2>");
+				}
+
+
+				for (var soeji in members) {
+					for (var soeji2 in members[soeji]) {
+						document.write("<h2 style='color:#0000ff'>members[",soeji,"][",soeji2,"]は" , members[soeji][soeji2] , "です</h2>");
+					}
+				}
+
+				document.write("<h2>",members.length,"</h2>");//確認用
+
+
+				var tshirts = new Object();
+				tshirts["small"] = new Object();
+				tshirts["middle"] = new Object();
+				tshirts["large"] = new Object();
+
+				tshirts["small"] = {price : 2800 , color : "赤色" , stock : 10};
+				tshirts["middle"] = {price : 2900 , color : "黄色" , stock : 20};
+				tshirts["large"] = {price : 3000 , color : "青色" , stock:11};
+
+				document.write("<h1>" , tshirts["small"]["price"] , "</h1>");
+
+				for (var num in tshirts){
+					for (var num2 in tshirts[num]) {
+						document.write("<h1>",tshirts[num][num2],"</h1>");
+					}
+				}
+
+				document.write("<table border='1' style='border-spacing:0'>");
+				document.write("<tr>",
+					"<th>サイズ</th>",
+					"<th>値段</th>",
+					"<th>カラー</th>",
+					"<th>在庫数</th>",
+					"<tr>");
+				for (var size in tshirts) {
+					document.write("<tr>");
+					document.write("<td>",size,"</td>");
+					document.write("<td>",tshirts[size]["price"],"円</td>");
+					document.write("<td>",tshirts[size]["color"],"</td>");
+					document.write("<td>",tshirts[size]["stock"],"枚</td>");
+					document.write("<tr>");
+				}
+				document.write("</table>");
+
+
+			</script>
+		</p>
+	</body>
+
+</html>
