@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja"> 
+	<head>
+		<meta charset="utf-8">
+		<title>2次元配列</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<script>
+			//オブジェクトオブジェクトのインスタンスを生成する
+			var tshirts = new Object();
+			//２次元の配列を生成する
+			tshirts["small"] = new Object();
+			tshirts["middle"] = new Object();
+			tshirts["large"] = new Object();
+			tshirts["xlarge"] = new Object();
+			//２次元の配列を定義する
+			tshirts["small"] = {price:2800,stock:10,}
+			tshirts["middle"] = {price:2900,stock:20,}
+			tshirts["large"] = {price:3000,stock:11,}
+			tshirts["xlarge"] = {price:3100,stock:23,}
+			//tableタグの設定
+			document.write("<table border='1' style='border-spacing:0;'>");
+				document.write(
+					"<tr>",
+						"<th>サイズ</th>",
+						"<th>値段</th>",
+						"<th>カラー</th>",
+						"<th>在庫数</th>",
+					"</tr>"
+					);
+				//for分を利用してサイズごとに３次元の配列を定義する
+				for (var size in tshirts) {//tshirtsの直下の配列の分だけループする
+					tshirts[size]["color"] = new Object;
+					tshirts[size]["color"] = {red:"赤色",blue:"青色",yellow:"黄色",pink:"桃色",green:"緑色"};
+					document.write(
+						"<tr>",
+							"<td>" , size , "</td>",//tshirtsの直下に定義された配列
+							"<td>" , tshirts[size]["price"] , "円</td>"//thirtsのサイズごとの価格
+						);
+						document.write("<td>");//カラーを囲うテーブルデータの始まり
+							for (var selectColor in tshirts[size]["color"]) {//Ｔシャツのサイズごとの定義されたカラーの数だけループする
+								document.write("<span style='color:",selectColor,"'>" , tshirts[size]["color"][selectColor] , "</span><br>");//Ｔシャツのサイズごとに定義されたカラーが全て出力される
+							}
+						document.write("</td>");//カラーを囲うテーブルデータの終わり
+						document.write("<td>" , tshirts[size]["stock"] , "枚</td>");//Ｔシャツのサイズごとのストック枚数が出力される
+					document.write("</tr>");
+				}
+			document.write("</table>");
+
+
+			document.write("<table border='1' style='border-spacing:0;'>");
+				document.write(
+					"<tr>",
+					"<td>サイズ</td>",
+					"<td>価格</td>",
+					"<td>カラー</td>",
+					"<td>在庫数</td>",
+					"</tr>"
+					);
+				for (var size in tshirts) {
+					tshirts[size]["color"] = new Object;
+					tshirts[size]["color"] = {red:"赤",blue:"青",yellow:"黄色",pink:"桃色",green:"緑"}
+					document.write("<tr>");
+						document.write(
+							"<td>",size,"</td>",
+							"<td>",tshirts[size]["price"],"</td>"
+							);
+						document.write("<td>");
+						for (var selectColor in tshirts[size]["color"]) {
+							document.write("<span style='color:",selectColor,"'>",tshirts[size]["color"][selectColor],"</span>");
+						}
+						document.write("</td>");
+
+						document.write(
+							"<td>" , tshirts[size]["stock"] , "</td>");
+					document.write("</tr>");
+				}
+			document.write("</table>");
+
+
+			document.write("<table border='1'>");
+				document.write(
+					"<tr>",
+						"<td>サイズ</td>",
+						"<td>値段</td>",
+						"<td>カラー</td>",
+						"<td>在庫数</td>",
+					"</tr>"
+					);
+				for (size in tshirts) {
+					document.write("<tr>");
+						document.write(
+							"<td>" , size , "</td>",
+							"<td>" , tshirts[size]["price"] , "</td>"
+							);
+						document.write("<td>");
+						for (selectColor in tshirts[size]["color"]) {
+							document.write("<span style='color:",selectColor,"'>",tshirts[size]["color"][selectColor],"</span>");
+						}
+						document.write("</td>");
+						document.write("<td>" , tshirts[size]["stock"] , "</td>");
+
+
+					document.write("</tr>");
+				}
+			document.write("</table>");
+
+			document.write("<table border='1'>");
+				document.write(
+					"<tr>",
+						"<td>サイズ</td>",
+						"<td>値段</td>",
+						"<td>カラー</td>",
+						"<td>在庫数</td>",
+					"</tr>"
+					);
+				for (var size in tshirts) {
+					tshirts[size]["color"] = new Object();
+					tshirts[size]["color"] = {red:"赤" , blue:"青赤" , yellow:"黄" , pink:"桃" , green:"緑"};
+					document.write("<tr>");
+						document.write(
+							"<td>" , size , "</td>",
+							"<td>" , tshirts[size]["price"] , "</td>"
+							);
+						document.write("<td>");
+							for (var selectColor in tshirts[size]["color"]) {
+								document.write("<span style='color:",selectColor,";'>" , tshirts[size]["color"][selectColor] , "</span>");
+							}
+						document.write("</td>");
+						document.write("<td>",tshirts[size]["stock"],"</td>");
+
+					document.write("</tr>");
+				}
+
+			document.write("</table>");
+		</script>
+	</body>
+
+</html>

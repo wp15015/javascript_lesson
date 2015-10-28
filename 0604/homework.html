@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>リンクや文字を設定する</title>
+	</head>
+	<body bgcolor="#ffffff">
+		<p style="font-size:200%;">
+			<script >
+				var str1 = new String("Stringオブジェクト");
+				document.write("<h1>" , str1 , "</h1>");
+				document.write("<h1>" , str1.length		 , "</h1>");
+
+				var str2 = new String("文字列操作");
+				for (var i = 0; i <= (str2.length - 1); i++) {
+					document.write("<h2>" , str2.charAt(i) , "<h2>");
+				}
+
+				var str3 = new String("もじもじクン");
+				document.write("<h1>",str3,"</h1>");
+				document.write("<h2>",str3.length,"</h2>");
+
+				var str4 = new String("もじもじクン");
+				for (var i = 0; i <= (str4.length - 1); i++) {
+					document.write("<h2>",str4.charAt(i),"<h2>");
+				}
+			</script>
+		</p>
+	</body>
+
+</html>
