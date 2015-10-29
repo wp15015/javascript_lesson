@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>オブジェクトのメソッド</title>
+		<script>
+		/*
+			for (var prop in navigator) {
+				document.write("<p>" , prop , ":" ,navigator[prop], "</p>");
+			}
+		*/
+
+		var userAgent = navigator.userAgent;
+		if (userAgent.indexOf("Chrome") >= 0) {
+			document.write("<h1>こんにちはChromeユーザーさん</h1>");
+		} else if (userAgent.indexOf("Trident") >= 0) {
+			document.write("<h1>こんにちはInternetExpplorerユーザーさん</h1>");
+		} else {
+			document.write("<h1>こんにちはその他ブラウザのユーザーさん</h1>");
+		}
+		</script>
+		</p>
+	</body>
+
+</html>

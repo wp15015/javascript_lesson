@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>3年4組のテストの結果</title>
+		<style>
+			table{
+				width:80%;
+				margin:10px auto;
+			}
+			h1{
+				text-align:center;
+			}
+		</style>
+		<script>
+			var students = new Object();
+			students[0] = {"name":"穂波たまえ","id":"1"};
+			students[1] = {"name":"花輪和彦","id":"2"};
+			students[2] = {"name":"丸尾末男","id":"3"};
+			students[3] = {"name":"野口笑子","id":"4"};
+			students[4] = {"name":"土橋とし子","id":"5"};
+			students[5] = {"name":"浜崎のりたか","id":"6"};
+			students[6] = {"name":"富田太郎","id":"7"};
+			students[7] = {"name":"永沢君男","id":"8"};
+			students[8] = {"name":"藤木茂","id":"9"};
+			students[9] = {"name":"富田太郎","id":"10"};
+			students[10] = {"name":"山根つよし","id":"11"};
+			students[11] = {"name":"小杉太","id":"12"};
+			students[12] = {"name":"山田笑太","id":"13"};
+			students[13] = {"name":"城ケ崎姫子","id":"14"};
+			students[14] = {"name":"笹山かず子","id":"15"};
+			students[15] = {"name":"みぎわ花子","id":"16"};
+			students[16] = {"name":"さくらももこ","id":"17"};
+			var scores = new Object();
+			scores["1"] = {kokugo: 72 , rika: 70 , sansu: 87 , shakai: 93};
+			scores["2"] = {kokugo: 79 ,rika: 82 ,sansu: 87 ,shakai: 69};
+			scores["3"] = {kokugo: 81 , rika: 94 , sansu: 96 ,shakai: 95};
+			scores["4"] = {kokugo: 73 , rika: 90 , sansu: 89 , shakai: 72};
+			scores["5"] = {kokugo: 75 , rika: 62 , sansu: 79 ,shakai: 68};
+			scores["6"] = {kokugo: 31 , rika: 55 , sansu: 3 , shakai: 83};
+			scores["7"] = {kokugo: 36 , rika: 59 , sansu: 92 , shakai: 64};
+			scores["8"] = {kokugo: 77 , rika: 68 , sansu: 29 , shakai: 66};
+			scores["9"] = {kokugo: 95 , rika: 14 , sansu: 6 , shakai: 70};
+			scores["10"] = {kokugo: 80 , rika: 77 , sansu: 7 , shakai: 67};
+			scores["11"] = {kokugo: 57 , rika: 82 , sansu: 96 , shakai: 62};
+			scores["12"] = {kokugo: 8 , rika: 64 , sansu: 46 , shakai: 46};
+			scores["13"] = {kokugo: 17 , rika: 27 , sansu: 50 , shakai: 43};
+			scores["14"] = {kokugo: 66 , rika: 58 , sansu: 48 , shakai: 86};
+			scores["15"] = {kokugo: 52 , rika: 86 , sansu: 93 , shakai: 71};
+			scores["16"] = {kokugo: 0 , rika: 74 , sansu: 17 , shakai: 53};
+			scores["17"] = {kokugo: 44 , rika: 36 , sansu: 64 ,shakai: 2}
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		
+		<h1>3年4組のテスト結果</h1>
+		<table border="1">
+			<tr>
+				<th>出席番号</th>
+				<th>氏名</th>
+				<th>国語</th>
+				<th>算数</th>
+				<th>理科</th>
+				<th>社会</th>
+				<th>合計</th>
+				<th>平均点</th>
+			</tr>
+			<script>
+				var soeji = 0;
+				var shisyagonyu;
+					for (var scores_key in scores){
+						document.write("<tr>");
+							document.write(
+								"<td>" , students[soeji]["id"] , "</td>",
+								"<td>" , students[soeji]["name"] , "</td>",
+								"<td>" , scores[scores_key]["kokugo"] , "</td>",
+								"<td>" , scores[scores_key]["rika"] , "</td>",
+								"<td>" , scores[scores_key]["sansu"] , "</td>",
+								"<td>" , scores[scores_key]["shakai"] , "</td>"
+								);
+							var sum = 0;//合計点の計算に使用
+							var kyokasu = 0;//教科数をカウント
+									for (var tensu in scores[scores_key]) {
+										sum = sum + scores[scores_key][tensu]
+										kyokasu++;
+									}
+							document.write(
+								"<td>" , sum , "</td>",
+								"<td>" , Math.round(sum / kyokasu) , "</td>"
+								);
+						document.write("</tr>");
+						soeji++;
+					}
+
+			</script>
+		</table>
+
+
+
+				<table border="1">
+			<tr>
+				<th>出席番号</th>
+				<th>氏名</th>
+				<th>国語</th>
+				<th>算数</th>
+				<th>理科</th>
+				<th>社会</th>
+				<th>合計</th>
+				<th>平均点</th>
+			</tr>
+			<script>
+					for (var soeji in students){
+						document.write("<tr>");
+							document.write(
+								"<td>" , students[soeji]["id"] , "</td>",
+								"<td>" , students[soeji]["name"] , "</td>",
+								"<td>" , scores[students[soeji]["id"]]["kokugo"] , "</td>",
+								"<td>" , scores[students[soeji]["id"]]["rika"] , "</td>",
+								"<td>" , scores[students[soeji]["id"]]["sansu"] , "</td>",
+								"<td>" , scores[students[soeji]["id"]]["shakai"] , "</td>"
+								);
+							var sum = 0;//合計点の計算に使用
+							var kyokasu = 0;//教科数をカウント
+									for (var tensu in scores[students[soeji]["id"]]) {
+										sum = sum + scores[students[soeji]["id"]][tensu]
+										kyokasu++;
+									}
+							document.write(
+								"<td>" , sum , "</td>",
+								"<td>" , Math.round(sum / kyokasu) , "</td>"
+								);
+						document.write("</tr>");
+					}
+
+
+					var testB = new Array();
+					testB = {2:2,0:0,1:1};
+					for (var num in testB) {
+						document.write(testB["1"]);
+					}
+
+					document.write("<br>");
+
+					var testC= new Array();
+					testC["2"] = "2";
+					testC["0"] = "0";
+					testC["1"] = "1";
+					for (var num in testC) {
+						document.write(num);
+						document.write(testC[num]);
+					}
+
+			</script>
+		</table>
+	</body>
+
+</html>
