@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>navi gatorオブジェクト</title>
+
+	</head>
+	<body>
+		<script>
+		/*
+			for (var prop in navigator) {
+				document.write("<p>" , prop , ":" , navigator[prop] , "</p>");
+			}
+		*/
+
+
+			var platform = navigator.platform;
+			if (platform.indexOf("Mac") >= 0) {
+				document.write("<h1>こんにちはMacユーザーさん</h1>");
+			} else if (platform.indexOf("Win") >= 0) {
+				document.write("<h1>こんにちはWinユーザーさん</h1>");
+			} else {
+				document.write("<h1>こんにちはその他ＯＳのユーザーさん</h1>");
+			}
+		</script>
+		</p>
+	</body>
+
+</html>
