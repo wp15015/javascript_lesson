@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>windowを開く</title>
+		<script>
+			function openWin() {
+				var win = window.open("","","width=300 , height=280");
+				win.document.open();
+				win.document.write("<img src='photo2.jpg'>");
+				win.document.write("<form><p>");
+				win.document.write("<input type='button' value='閉じる'");
+				win.document.write("onclick='window.close()'>");
+				win.document.write("</p></form>");
+			}
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<form name="myForm">
+			<p>
+				<input type="button" value="開く" name="openBth" onclick="openWin()">
+			</p>
+		</form>
+			<script >
+			</script>
+
+		</table>
+		</p>
+	</body>
+
+</html>

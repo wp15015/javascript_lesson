@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<titleフォームの部品を利用する</title>
+		<script>
+		var Operator;
+/*
+			function tashizan(myForm){
+				var atai1 , atai2 , kekka;
+				atai1 = Number(myForm.tashizan_atai1.value);
+				atai2 = Number(myForm.tashizan_atai2.value);
+				kekka = atai1 + atai2;
+				myForm.tashizan_keisankekka.value = kekka;
+			}
+			function hikizan(myForm){
+				var atai1 , atai2;
+				atai1 = Number(myForm.hikizan_atai1.value);
+				atai2 = Number(myForm.hikizan_atai2.value);
+				kekka = atai1 - atai2;
+				myForm.hikizan_keisankekka.value = kekka;
+			}
+			function kakezan(myForm){
+				var atai1 , atai2;
+				atai1 = Number(myForm.kakezan_atai1.value);
+				atai2 = Number(myForm.kakezan_atai2.value);
+				kekka = atai1 * atai2;
+				myForm.kakezan_keisankekka.value = kekka;
+			}
+			function warizan(myForm){
+				var atai1 , atai2;
+				atai1 = Number(myForm.warizan_atai1.value);
+				atai2 = Number(myForm.warizan_atai2.value);
+				kekka = atai1 / atai2;
+				myForm.warizan_keisankekka.value = kekka;
+			}
+*/
+			function enzan(myForm , enzanNaiyo) {
+				var atai1 , atai2;
+				if (enzanNaiyo == 'tashizan') {//足し算
+					atai1 = Number(myForm.atai[0].value);
+					atai2 = Number(myForm.atai[1].value);
+					kekka = atai1 + atai2;
+				} else if (enzanNaiyo == 'hikizan') {//引き算
+					atai1 = Number(myForm.atai[0].value);
+					atai2 = Number(myForm.atai[1].value);
+					kekka = atai1 - atai2;
+				} else if (enzanNaiyo == 'kakezan') {//掛け算
+					atai1 = Number(myForm.atai[0].value);
+					atai2 = Number(myForm.atai[1].value);
+					kekka = atai1 * atai2;
+				} else if (enzanNaiyo == 'warizan') {//割り算
+					atai1 = Number(myForm.atai[0].value);
+					atai2 = Number(myForm.atai[1].value);
+					kekka = atai1 / atai2;
+				}
+				if (isNaN(kekka)) {
+					alert("数字を入力してください");
+				}
+				myForm.keisankekka.value = kekka;
+			}
+		</script>
+
+	</head>
+	<body bgcolor="#ffffff">
+		<script>
+/*
+			document.write("<h3>",kekka,"</h3><br>");
+			document.write("<h3>",tashizan_atai1,"</h3><br>");
+			document.write("<h3>",tashizan_atai2,"</h3><br>");
+*/
+		</script>
+		<form name="enzanForm1">
+			<p>
+			<!--足し算-->
+				<h3>足し算</h3>
+				<input type="text" name="atai"
+				 size="5"><!--足し算　値１-->
+				 <span>＋</span>
+				<input type="text" name="atai"
+				 size="5"><!--足し算　値２-->
+				計算結果：<input type="text" name="keisankekka"
+				 size="7"><br>
+				 <!--ボタン-->
+				<input type="button" value="足し算" name="calc"
+				 onclick="enzan(this.form , 'tashizan')">
+			</p>
+		</form>
+
+		<form name="enzanForm2">
+			<p>
+			<!--引き算-->
+				<h3>引き算</h3>
+				<input type="text" name="atai"
+				 size="5"><!--足し算　値１-->
+				 <span>－</span>
+				<input type="text" name="atai"
+				 size="5"><!--足し算　値２-->
+				計算結果：<input type="text" name="keisankekka"
+				 size="7"><br>
+				 <!--ボタン-->
+				<input type="button" value="引き算" name="calc"
+				 onclick="enzan(this.form , 'hikizan')"><!--引き算-->
+			</p>
+		</form>
+
+		<form name="enzanForm3">
+			<p>
+			<!--掛け算-->
+				<h3>掛け算</h3>
+				<input type="text" name="atai"
+				 size="5"><!--足し算　値１-->
+				 <span>×</span>
+				<input type="text" name="atai"
+				 size="5"><!--足し算　値２-->
+				計算結果：<input type="text" name="keisankekka"
+				 size="7"><br>
+				 <!--ボタン-->
+				<input type="button" value="掛け算" name="calc"
+				 onclick="enzan(this.form , 'kakezan')"><!--掛け算-->
+			</p>
+		</form>
+
+		<form name="enzan4">
+			<p>
+			<!--割り算-->
+				<h3>割り算</h3>
+				<input type="text" name="atai"
+				 size="5"><!--足し算　値１-->
+				 <span>÷</span>
+				<input type="text" name="atai"
+				 size="5"><!--足し算　値２-->
+				計算結果：<input type="text" name="keisankekka"
+				 size="7"><br>
+				 <!--ボタン-->
+				<input type="button" value="割り算" name="calc"
+				 onclick="enzan(this.form , 'warizan')"><!--割り算--><br>
+			</p>
+		</form>
+	</body>
+</html>
