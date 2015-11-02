@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>ユーザー定義オブジェクトを作ろう</title>
+		<script>
+			function Person(name , height) {
+				this.name = name;
+				this.height = height;
+			}
+
+			function calcWeight() {
+				var weight;
+				weight = (this.height - 100) * 0.9;
+				return weight;
+			}
+
+			Person.prototype.stdWeight = calcWeight;
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<script>
+			var friends = new Array(3);
+			friends[0] = new Person("山田太郎",160);
+			friends[1] = new Person("田中花子",165);
+			friends[2] = new Person("猫山一郎",180);
+
+			for (var i = 0; i <= friends.length - 1; i++ ) {
+				document.write("<p>" , friends[i].name , ":" ,
+					friends[i].height , "cm ->" , 
+					friends[i].stdWeight() , "kg</p>");
+			}
+		</script>
+	</body>
+</html>
