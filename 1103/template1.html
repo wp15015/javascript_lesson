@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<script src="jquery-1.4.2.min.js"></script>
+		<title>jQueryについて</title>
+		<style>
+		</style>
+		<script>
+			$(function() {
+				$("li").css("backgroundColor" , "yellow");
+				$("#title").css({color: "red" , fontSize: "400%"});
+				$("#btn1").click(function(){
+					$("#myImg").attr("src" , "images/photo1.jpg");
+				})
+			})
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<form>
+			<p>
+				<input type="button" id="btn1" value="変更">
+			</p>
+		</form>
+
+		<h1 id="title">JavaScript入門</h1>
+			<ul>
+				<li>JavaScriptの基礎知識</li>
+				<li>初めてのプログラム</li>
+			</ul>
+			<img id="myImg" src="images/photo2.jpg" height="240" width="320" alt="写真２">
+	</body>
+</html>

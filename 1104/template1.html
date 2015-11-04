@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<script src="jquery-1.4.2.min.js"></script>
+		<title>ライブラリを活用したアニメーション</title>
+		<style>
+			#photo{
+				display: none;
+			}
+			#ball{
+				position: absolute;
+				top: 150px;
+				left: 0px;
+			}
+		</style>
+		<script>
+			$(function(){
+				$("#fIn").click(function(){
+					$("#photo").fadeIn("slow");
+				});
+				$("#fOut").click(function(){
+					$("#photo").fadeOut("slow");
+				});
+				$("#toggle").click(function(){
+					$("#photo").slideToggle(2000);
+				});
+				$(document).click(function(e){
+					$("#ball").animate({
+						left:e.pageX + "px" , top:e.pageY + "px"
+					} , "show" , "swing");
+				});
+			});
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<form>
+			<p>
+				<input type="button" id="fIn" value="フェードイン">
+				<input type="button" id="fOut" value="フェードアウト">
+				<input type="button" id="toggle" value="トグル">
+			</p>
+		</form>
+
+		<div id="photo">
+			<img src="images/photo3.jpg" height="240" width="320" alt="写真３">
+		</div>
+		<div id="ball">
+			<img src="images/ball.png" height="92" width="87" alt="ボールのイメージ">
+		</div>
+	</body>
+</html>

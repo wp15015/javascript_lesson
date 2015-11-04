@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>掃除当表</title>
+		<style>
+		</style>
+		<script>
+			var className = new Array();
+			className[0] = "古井志保子";
+			className[1] = "前原裕幸";
+			className[2] = "瑞慶山君子";
+			className[3] = "久銘次あかね";
+			className[4] = "岡田安民";
+			className[5] = "石郷岡寛";
+			className[6] = "倉本由記";
+			className[7] = "奥間朝文";
+			className[8] = "菊池喜之";
+			className[9] = "齋藤勇治";
+			className[10] = "堀川あきえ";
+			className[11] = "神山裕康";
+			className[12] = "知念琴絵";
+			className[13] = "比嘉将太";
+			className[14] = "畠中亜由美";
+			className[15] = "赤嶺哲平";
+			className[16] = "阿嘉純也";
+			className[17] = "崎原純";
+			className[18] = "東江美和";
+
+			var sojiName = new Array();
+			sojiName[0] = "";
+			sojiName[1] = "";
+			sojiName[2] = "";
+			sojiName[3] = "";
+			sojiName[4] = "";
+			sojiName[5] = "";
+			sojiName[6] = "";
+			sojiName[7] = "";
+			sojiName[8] = "";
+			sojiName[9] = "";
+			sojiName[10] = "";
+			sojiName[11] = "";
+			sojiName[12] = "";
+			sojiName[13] = "";
+			sojiName[14] = "";
+			sojiName[15] = "";
+			sojiName[16] = "";
+			sojiName[17] = "";
+			sojiName[18] = "";
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<h1>掃除当番表</h1>
+			<table>
+			<script>
+				var randNum;
+				var flag;
+				var whilekaisu;
+
+				for (var soeji in className) {
+					while (true) {
+						randNum = Math.floor(Math.random() * className.length);
+						for (var i = 0; i <= soeji; i++) {
+							if (className[randNum] == sojiName[i]) {
+								flag = "out";
+								break;
+							}
+						}
+						flag ="safe";
+						if (flag == "safe") {
+							break;
+						}
+					}
+					sojiName[soeji] = className[randNum];
+				}
+
+
+
+				for (var soeji in sojiName){
+					document.write("<tr>");
+					document.write("<td>" , sojiName[soeji] , "</td>");
+					document.write("</tr>");
+					}
+
+					sojiName[0] = className[0];
+			</script>
+			</table>
+	</body>
+</html>
